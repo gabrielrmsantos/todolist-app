@@ -11,6 +11,7 @@ export function Home() {
 
   const [tasks, setTasks] = useState<ITask[]>([]);
   const [taskDescription, setTaskDescription] = useState('');
+  const [inputBorderColor, setInputBorderColor] = useState('#0D0D0D');
 
   function handleTaskAdd() {
     if (taskDescription === "") return Alert.alert("Ação inválida!", "Não é possível criar uma tarefa sem descrição.");
@@ -54,10 +55,12 @@ export function Home() {
       <View style={styles.bodyContainer}>
         <View style={styles.taskForm}>
           <TextInput
-            style={styles.taskInput}
+            style={[{ borderColor: inputBorderColor }, styles.taskInput]}
             placeholderTextColor="#808080"
             placeholder="Adicione uma nova tarefa"
             onChangeText={text => setTaskDescription(text)}
+            onBlur={() => setInputBorderColor('#0D0D0D')}
+            onFocus={() => setInputBorderColor('#5E60CE')}
             value={taskDescription}
           />
 

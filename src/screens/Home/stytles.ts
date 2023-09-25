@@ -29,6 +29,7 @@ export const styles = StyleSheet.create({
     padding: 14,
     height: 56,
     backgroundColor: '#262626',
+    borderWidth: 1,
   },
   taskAddButton: {
     width: 56,
