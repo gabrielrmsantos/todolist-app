@@ -2,16 +2,24 @@ import { StyleSheet } from "react-native";
 
 export const styles = StyleSheet.create({
   headerContainer: {
-    padding: 24,
+    paddingVertical: 70,
+    paddingHorizontal: 24,
     backgroundColor: '#0D0D0D',
+    alignItems: 'center',
+  },
+  headerLogo: {
+    height: 32,
+    width: 110
   },
   bodyContainer: {
     flex: 1,
-    padding: 24,
+    paddingHorizontal: 24,
     backgroundColor: '#1A1A1A',
   },
   taskForm: {
-    flexDirection: 'row'
+    marginTop: -30,
+    flexDirection: 'row',
+    marginBottom: 32,
   },
   taskInput: {
     flex: 1,
@@ -21,7 +29,6 @@ export const styles = StyleSheet.create({
     padding: 14,
     height: 56,
     backgroundColor: '#262626',
-    marginBottom: 30,
   },
   taskAddButton: {
     width: 56,
@@ -30,5 +37,9 @@ export const styles = StyleSheet.create({
     backgroundColor: '#1E6F9F',
     alignItems: 'center',
     justifyContent: 'center'
-  }
+  },
+  taskAddButtonIcon: {
+    width: 16,
+    height: 16,
+  },
 });
